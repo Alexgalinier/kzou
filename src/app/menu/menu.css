@@ -1,0 +1,130 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    background: #F1F5F7;
+    border-right: 1px solid #D1D8DF;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.menu-logo-banner {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.menu-logo {
+    display: inline-block;
+    margin-right: 16px;
+    height: 32px;
+    width: 32px;
+    background: rgb(100,100,100);
+    border-radius: 100%;
+    vertical-align: middle;
+}
+
+.menu-title {
+    font-size: 28px;
+    font-weight: 300;
+    text-align: left;
+    font-family: Courier;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.menu-icon-clone {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.menu-items {
+    padding-top: 44px;
+}
+
+.menu-items .menu-item-group:first-child {
+    margin-top: 0;
+}
+
+.menu-item-group {
+    margin-top: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #D1D8DF;
+}
+
+.menu-item-group-title {
+    margin-bottom: 20px;
+    padding-left: 19px;
+    line-height: 1rem;
+    font-size: 14px;
+    color: rgb(106, 106, 106);
+}
+
+.menu-item, .menu-item:visited {
+    position: relative;
+    line-height: 48px;
+    padding-left: 64px;
+    box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+    color: rgb(51,52,53);
+    border-left: 3px solid transparent;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.menu-item .menu-icon {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    display: block;
+    font-size: 16px;
+    line-height: 32px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    background: rgba(0,0,0,.1);
+    border-radius: 100%;
+}
+
+.menu-item:hover {
+    color: #4477E5;
+}
+
+.menu-item.selected {
+    color: #4477E5;
+    cursor: pointer;
+    border-left: 3px solid #4477E5;
+}
+
+.menu-item.selected .menu-icon,
+.menu-item.selected:hover .menu-icon {
+    color: #CDDAF8;
+    background: #4477E5;
+}
+
+.menu-item:hover .menu-icon {
+    color: rgb(51,52,53)
+}
+
+@media only screen and (max-device-width: 812px) {
+    .menu {
+        width: 80%;
+        z-index: 2;
+        left: -80%;
+        transition: left .25s ease;
+    }
+
+    .menu.show {
+        left: 0;
+    }
+
+    .menu.hide {
+        left: -80%;
+    }
+}
+
