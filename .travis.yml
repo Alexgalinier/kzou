@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '8'
+cache:
+  directories:
+  - node_modules
+before_deploy: npm run build
+deploy:
+  provider: firebase
+  token:
+    secure: M0cSDVn9Zluba1sjW2R5g42xUY3h2tjUcuyT6kwSama0K5ocE5UmvaP+zWXhwLvpIOIH/lVrCgyve65VE+gK/+93HjjLmqnY5AI2DXN6FcwEycmHWGLTeKiaOWcC/+XGctYs2vwfS7+2urM9sEGZmTMMmusee24JtWKLFG3fbcw+usRSGt33zdbDwE8v9O4NkYkslSV7WNp3+PgQJBIyo09mckPsbzyq+oL/xvGjZ2clA0ijW1BjHWaTbcpE41ASOuKA0T76xZolBRDdbPXpzC8RIRKPSiVF2Om76/aH6fJ8WQ/m53WeM2O+wzOciafWeruYDa48Y+s3Qh9N/92iuIjhNm8URZubMLqEIi7JGFc/58xrhttO9BaP/VI+C2qTLERrLaPk0pWL3bJV2xeeUJOZsfdH47dv3eKtyG6kK9y/CMop1O2mAfB83mz1UCq01k03G0yPj7aQp60tjl3XAnDMhKlW1AoQUiLFxOA8T3oPwADD4hhbu6SjyoMv7TwvAAg7/s2mAemBN8qnYi7I8dl6D2xGo9AQhzITLx3MCqAOJCZ5dXv1ZonRWL+1BWEbtzJEPzr7BcCK3BbWfQB27vrka6sVQNMm7bzoVTG8F5pemd8FCPSfXPpQGzAaQRXU+OCccC8avEAJvmvg7UBasxj5w22BSaT2gGUG6W4NvmI=
+  project: kzou
+  on:
+    branch: master
