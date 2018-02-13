@@ -18,11 +18,54 @@ body {
   overflow: hidden;
 }
 
-.width-limit {
-  position: fixed;
-  width: 1px;
-  height: 100vh;
-  top: 0;
-  left: 1366px;
-  background: red;
-}
+/* Underscore !_! Framework (inspired by Tachyons.css) */
+
+
+/* Colors */
+/* --- Background */
+._bg-grey-3 { background: rgb(250,250,250); }
+._bg-blue-1 { background: rgb(68,119,229); }
+/* --- Border */
+._bc-grey-1 { border-color: #D1D8DF; }
+._bc-grey-2 { border-color: rgb(204,210,218); }
+._bc-red { border-color: #BF360C; }
+/* --- Text */
+._alpha50 { color: rgba(0,0,0,.5); }
+._black { color: rgb(51,52,53); }
+
+/* Layout */
+._fx { display: flex; }
+._items-center { align-items: center; }
+._grow { flex: 1; }
+
+/* Sizing */
+/* --- Border */
+._b1 { border-width: 1px; border-style: solid; }
+._br1 { border-right-width: 1px; border-right-style: solid; }
+._bb1 { border-bottom-width: 1px; border-bottom-style: solid; }
+/* --- Font-Size */
+._fs14 { font-size: 14px; }
+._fs16 { font-size: 16px; }
+._fs18 { font-size: 18px; }
+._fs30 { font-size: 30px; }
+/* --- Line-Height */
+._lh20 { line-height: 20px; }
+._lh40 { line-height: 40px; }
+._lh1 { line-height: 1em; }
+/* --- Margin */
+._m0 { margin: 0;}
+._mb8 { margin-bottom: 8px; }
+._mb10 { margin-bottom: 10px; }
+._mb20 { margin-bottom: 20px; }
+._mt30 { margin-top: 30px; }
+/* --- Padding */
+._pb8 { padding-bottom: 8px; }
+._pl16 { padding-left:16px; }
+._pr16 { padding-right: 16px; }
+._p20 { padding: 20px; }
+._pb20 { padding-bottom: 20px; }
+._pr30 { padding-right: 30px; }
+._pb30 { padding-bottom: 30px; }
+._pl30 { padding-left:30px; }
+._pt35 { padding-top: 35px; }
+._pb35 { padding-bottom: 35px; }

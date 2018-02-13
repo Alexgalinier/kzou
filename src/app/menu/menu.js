@@ -21,7 +21,7 @@ export default ({ showMenu, showHideMenu, isMobile }) => {
     <div className={menuClass}>
       <div className="menu-logo-banner">
         <span className="menu-logo"> </span>
-        <spam className="menu-title">Kzou</spam>
+        <span className="menu-title">Kzou</span>
         {toggleMenuIcon}
       </div>
       <div className="menu-items">

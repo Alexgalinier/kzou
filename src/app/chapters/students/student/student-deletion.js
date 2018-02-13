@@ -1,16 +1,14 @@
 import React from 'react';
-import Block from 'shared/components/block/Block';
+import { Block, DangerButton } from 'shared/components';
 
 export default ({ handleDelete }) => (
-  <Block title="Supprimer cet élève" className="b1 bc2 mt30">
-    <div className="l-flex">
-      <div className="l-f1">
+  <Block title="Supprimer cet élève" className="_b1 _bc-red _mt30">
+    <div className="_fx _items-center">
+      <div className="_grow">
         <p>Attention, cette opération est irréversible</p>
       </div>
       <div>
-        <button className="button danger" onClick={handleDelete}>
-          Supprimer
-        </button>
+        <DangerButton title="Supprimer" onClick={handleDelete} />
       </div>
     </div>
   </Block>
