@@ -1,0 +1,20 @@
+.form-entry .label {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form-entry .error-message {
+    color: #BF360C;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+}
+
+.form-entry.error {
+    padding-bottom: 8px;
+}
+
+.form-entry.error .input {
+    background: #FBE9E7;
+}

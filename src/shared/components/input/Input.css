@@ -1,0 +1,9 @@
+.input, .select {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.input:focus,
+.select:focus {
+    color: black;
+}

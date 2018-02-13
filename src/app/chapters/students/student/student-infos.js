@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Block from 'shared/components/block/Block';
+import { Block, Button, FormEntry, FormActions } from 'shared/components';
 
 export default class StudentInfos extends Component {
   constructor(props) {
@@ -12,12 +12,17 @@ export default class StudentInfos extends Component {
     this.lastnameInput.focus();
   }
 
+  componentWillReceiveProps(newProps) {
+    if (this.props.student._id !== newProps.student._id)
+      this.lastnameInput.focus();
+  }
+
   saveClicked = e => {
     e.preventDefault();
 
     const { student, handleSave } = this.props;
 
-    if (!student.id) {
+    if (!student._id) {
       this.lastnameInput.focus();
       this.lastnameInput.select();
     }
@@ -29,54 +34,30 @@ export default class StudentInfos extends Component {
 
     return (
       <Block title="Informations">
-        <div className="form-entry">
-          <label className="label" htmlFor="lastname">
-            Nom
-          </label>
-          <input
-            ref={_ => (this.lastnameInput = _)}
-            className="input"
-            type="text"
+        <form>
+          <FormEntry
+            label="Nom"
             name="lastname"
-            value={student.lastname}
-            onChange={handleInputChange}
+            inputRef={_ => (this.lastnameInput = _)}
+            inputValue={student.lastname}
+            inputOnChange={handleInputChange}
           />
-        </div>
 
-        <div className="form-entry">
-          <label className="label" htmlFor="firstname">
-            Prénom
-          </label>
-          <input
-            className="input"
+          <FormEntry
+            label="Prénom"
             name="firstname"
-            value={student.firstname}
-            onChange={handleInputChange}
+            inputValue={student.firstname}
+            inputOnChange={handleInputChange}
           />
-        </div>
 
-        <div className="form-actions">
-          <button className="button" onClick={this.saveClicked}>
-            {student._id ? 'Sauver' : 'Ajouter cet élève'}
-          </button>
-        </div>
+          <FormActions>
+            <Button
+              title={student._id ? 'Sauver' : 'Ajouter cet élève'}
+              onClick={this.saveClicked}
+            />
+          </FormActions>
+        </form>
       </Block>
     );
   }
 }
-
-/*
-<div className="form-entry error">
-  <label className="label" htmlFor="lastname">
-    Nom
-  </label>
-  <input
-    className="input"
-    type="text"
-    name="lastname"
-    value={student.lastname}
-    onChange={handleInputChange}
-  />
-  <div className="error-message">An error message</div>
-</div>
-*/

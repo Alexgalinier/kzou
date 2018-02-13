@@ -15,7 +15,7 @@ export default class Chapters extends Component {
 
     return (
       <div className={chaptersClass}>
-        <div className="chapters-content">
+        <div className="chapters-content _pl30 _pr30">
           <Switch>
             <Route path="/skills" exact component={Skills} />
             <Route path="/students" exact component={Students} />
