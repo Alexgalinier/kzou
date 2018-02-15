@@ -1,8 +1,8 @@
 import React from 'react';
+import Block from 'shared/components/block/Block';
 
 export default () => (
-  <div className="skill">
-    <h4>Math</h4>
+  <Block title="Math" className="mt30">
     <div className="skill-status">
       <div className="skill-name">Numération</div>
       <div className="status">
@@ -11,5 +11,5 @@ export default () => (
         <input type="radio" /> Validée
       </div>
     </div>
-  </div>
+  </Block>
 );
