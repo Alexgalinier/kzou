@@ -2,3 +2,20 @@
   background: #F1F5F7;
   color: rgba(0,0,0,.84);
 }
+
+/* Colors */
+.bc1 { border-color: #D1D8DF; }
+.bc2 { border-color: #BF360C; }
+
+/* Sizing */
+/* --- Margin */
+.m0 { margin: 0; }
+.mt30 { margin-top: 30px; }
+/* --- Padding */
+.p20 { padding: 20px; }
+/* --- Line-Height */
+.lh20 { line-height: 20px }
+/* --- Font-Size */
+.fs18 { font-size: 18px }
+/* --- Border */
+.b1 { border-width: 1px; border-style: solid; }

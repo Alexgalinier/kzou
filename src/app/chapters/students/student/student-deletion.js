@@ -1,17 +1,17 @@
 import React from 'react';
+import Block from 'shared/components/block/Block';
 
 export default ({ handleDelete }) => (
-  <div className="l-card b-red">
-    <h4>Supprimer cet élève</h4>
+  <Block title="Supprimer cet élève" className="b1 bc2 mt30">
     <div className="l-flex">
-      <div className="l-f1 pd-20">
+      <div className="l-f1">
         <p>Attention, cette opération est irréversible</p>
       </div>
-      <div className="pd-20">
+      <div>
         <button className="button danger" onClick={handleDelete}>
           Supprimer
         </button>
       </div>
     </div>
-  </div>
+  </Block>
 );
