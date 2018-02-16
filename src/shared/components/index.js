@@ -1,4 +1,5 @@
 export { default as Block } from './block/Block';
+export { default as DeleteBlock } from './block/DeleteBlock';
 export { default as Button } from './button/Button';
 export { default as DangerButton } from './button/DangerButton';
 export { default as FormEntry } from './form-entry/FormEntry';
