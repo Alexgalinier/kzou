@@ -1,5 +1,5 @@
 import React from 'react';
-import { Block, DeleteBlock } from 'shared/components';
+import { DeleteBlock } from 'shared/components';
 
 export default ({ handleDelete }) => (
   <DeleteBlock
