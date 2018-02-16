@@ -5,6 +5,7 @@ import StudentsDoc from './students-doc';
 import StudentDeletion from './student/student-deletion';
 import StudentInfos from './student/student-infos';
 import StudentSkills from './student/student-skills';
+import { RessourceLayout } from 'shared/components';
 
 export default class Students extends Component {
   constructor(props) {
@@ -105,21 +106,17 @@ export default class Students extends Component {
     const { students, studentsFilter } = this.state;
 
     return (
-      <div>
-        <div className="_fs30 _lh1 _pt35 _pb35">Elèves</div>
-        <div className="_fx">
-          <div className="layout-list _pr30 _br1 _bc-grey-1">
-            <StudentsList
-              students={students}
-              filter={studentsFilter}
-              handleFilterChange={this.studentsFilter}
-            />
-          </div>
-          <div className="layout-content _pr30 _pl30 _grow">
-            {this.detailView()}
-          </div>
-        </div>
-      </div>
+      <RessourceLayout
+        title="Elèves"
+        list={
+          <StudentsList
+            students={students}
+            filter={studentsFilter}
+            handleFilterChange={this.studentsFilter}
+          />
+        }
+        content={this.detailView()}
+      />
     );
   }
 }
