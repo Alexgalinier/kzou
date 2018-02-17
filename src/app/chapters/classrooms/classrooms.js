@@ -65,7 +65,11 @@ export default class Classrooms extends Component {
 
   classroomInfoChange = e => {
     const { selectedClassroom } = this.state;
-    this.actions.classroomInfo(e.target.name, e.target.value, selectedClassroom);
+    this.actions.classroomInfo(
+      e.target.name,
+      e.target.value,
+      selectedClassroom
+    );
   };
 
   classroomsFilter = e => {

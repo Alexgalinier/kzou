@@ -1,19 +1,5 @@
 import React, { Component } from 'react';
-import { ListWithNavLink } from 'shared/components';
-
-function highlightFilter(str, filter) {
-  if (!filter) return str;
-
-  let parts = str.split(new RegExp('(' + filter + ')', 'gi'));
-  for (let i = 1; i < parts.length; i += 2) {
-    parts[i] = (
-      <span className="filter-match _bg-blue-1" key={i}>
-        {parts[i]}
-      </span>
-    );
-  }
-  return <div>{parts}</div>;
-}
+import { ListWithNavLink, HighlightFilter } from 'shared/components';
 
 export default class ClassroomList extends Component {
   constructor(props) {
@@ -30,10 +16,7 @@ export default class ClassroomList extends Component {
     const { classrooms, filter, handleFilterChange } = this.props;
 
     const classroomsFiltered = classrooms.filter(
-      _ =>
-        (_.name).match(
-          new RegExp('(' + filter + ')', 'gi')
-        ) !== null
+      _ => _.name.match(new RegExp('(' + filter + ')', 'gi')) !== null
     );
 
     return (
@@ -45,9 +28,7 @@ export default class ClassroomList extends Component {
         addItemLinkTo={'/classrooms/create'}
         items={classroomsFiltered}
         itemLinkToFunc={_ => '/classrooms/' + _._id}
-        itemTitleFunc={_ =>
-          highlightFilter(_.name, filter)
-        }
+        itemTitleFunc={_ => <HighlightFilter value={_.name} filter={filter} />}
       />
     );
   }

@@ -1,19 +1,5 @@
 import React, { Component } from 'react';
-import { ListWithNavLink } from 'shared/components';
-
-function highlightFilter(str, filter) {
-  if (!filter) return str;
-
-  let parts = str.split(new RegExp('(' + filter + ')', 'gi'));
-  for (let i = 1; i < parts.length; i += 2) {
-    parts[i] = (
-      <span className="filter-match _bg-blue-1" key={i}>
-        {parts[i]}
-      </span>
-    );
-  }
-  return <div>{parts}</div>;
-}
+import { ListWithNavLink, HighlightFilter } from 'shared/components';
 
 export default class StudentsList extends Component {
   constructor(props) {
@@ -45,9 +31,12 @@ export default class StudentsList extends Component {
         addItemLinkTo={'/students/create'}
         items={studentsFiltered}
         itemLinkToFunc={_ => '/students/' + _._id}
-        itemTitleFunc={_ =>
-          highlightFilter(_.lastname + ' ' + _.firstname, filter)
-        }
+        itemTitleFunc={_ => (
+          <HighlightFilter
+            value={_.lastname + ' ' + _.firstname}
+            filter={filter}
+          />
+        )}
       />
     );
   }

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Highlight case insensitive 1`] = `
+<div>
+  Martin Scors
+  <span
+    className="filter-match _bg-blue-1"
+  >
+    e
+  </span>
+  s
+  <span
+    className="filter-match _bg-blue-1"
+  >
+    e
+  </span>
+  
+</div>
+`;
+
+exports[`Highlight matching parts corresponding to filter in value 1`] = `
+<div>
+  D
+  <span
+    className="filter-match _bg-blue-1"
+  >
+    enis
+  </span>
+   Villeneuve
+</div>
+`;
+
+exports[`Highlight multiple match 1`] = `
+<div>
+  Martin Scors
+  <span
+    className="filter-match _bg-blue-1"
+  >
+    e
+  </span>
+  s
+  <span
+    className="filter-match _bg-blue-1"
+  >
+    e
+  </span>
+  
+</div>
+`;
+
+exports[`Highlight nothing if not matching 1`] = `
+<div>
+  Sidney Lumet
+</div>
+`;

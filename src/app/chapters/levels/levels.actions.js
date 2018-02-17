@@ -5,8 +5,7 @@ import { API } from 'config';
 export default setStateFunc => {
   return {
     clearLevel: () => setStateFunc({ selectedLevel: null }),
-    newLevel: () =>
-      setStateFunc({ selectedLevel: { name: ''} }),
+    newLevel: () => setStateFunc({ selectedLevel: { name: '' } }),
     levelInfo: (key, value, prevLevel) => {
       prevLevel[key] = value;
       setStateFunc({ selectedLevel: prevLevel });
