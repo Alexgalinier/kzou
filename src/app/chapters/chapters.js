@@ -3,6 +3,7 @@ import { Route, Redirect, Switch } from 'react-router-dom';
 import './chapters.css';
 import Skills from './skills/skills';
 import Students from './students/students';
+import Classrooms from './classrooms/classrooms';
 import Projects from './projects/projects';
 import WorkingPlans from './working-plans/working-plans';
 
@@ -20,6 +21,8 @@ export default class Chapters extends Component {
             <Route path="/skills" exact component={Skills} />
             <Route path="/students" exact component={Students} />
             <Route path="/students/:_id" exact component={Students} />
+            <Route path="/classrooms" exact component={Classrooms} />
+            <Route path="/classrooms/:_id" exact component={Classrooms} />
             <Route path="/projects" exact component={Projects} />
             <Route path="/working-plans" exact component={WorkingPlans} />
             <Redirect to="/skills" />
