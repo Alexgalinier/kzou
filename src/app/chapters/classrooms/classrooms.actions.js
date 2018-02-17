@@ -5,8 +5,7 @@ import { API } from 'config';
 export default setStateFunc => {
   return {
     clearClassroom: () => setStateFunc({ selectedClassroom: null }),
-    newClassroom: () =>
-      setStateFunc({ selectedClassroom: { name: ''} }),
+    newClassroom: () => setStateFunc({ selectedClassroom: { name: '' } }),
     classroomInfo: (key, value, prevClassroom) => {
       prevClassroom[key] = value;
       setStateFunc({ selectedClassroom: prevClassroom });

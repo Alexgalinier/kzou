@@ -8,3 +8,4 @@ export { default as Input } from './input/Input';
 export { default as ListWithNavLink } from './list/ListWithNavLink';
 export { default as Paragraph } from './paragraph/Paragraph';
 export { default as RessourceLayout } from './layout/RessourceLayout';
+export { default as HighlightFilter } from './highlight-filter/HighlightFilter';

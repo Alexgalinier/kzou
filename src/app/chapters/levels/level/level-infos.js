@@ -13,8 +13,7 @@ export default class LevelInfos extends Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (this.props.level._id !== newProps.level._id)
-      this.nameInput.focus();
+    if (this.props.level._id !== newProps.level._id) this.nameInput.focus();
   }
 
   saveClicked = e => {
