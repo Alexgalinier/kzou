@@ -44,6 +44,15 @@ export default ({ showMenu, showHideMenu, isMobile }) => {
           >
             <span className="menu-icon icon-accessibility" /> Elèves
           </NavLink>
+
+          <NavLink
+            to="/classrooms"
+            className="menu-item"
+            activeClassName="selected"
+            onClick={onMenuItemClicked}
+          >
+            <span className="menu-icon icon-accessibility" /> Classes
+          </NavLink>
         </div>
 
         <div className="menu-item-group">
