@@ -29,6 +29,14 @@ export default ({ showMenu, showHideMenu, isMobile }) => {
           <div className="menu-item-group-title">Administration</div>
 
           <NavLink
+            to="/classrooms"
+            className="menu-item"
+            activeClassName="selected"
+            onClick={onMenuItemClicked}
+          >
+            <span className="menu-icon icon-accessibility" /> Classes
+          </NavLink>
+          <NavLink
             to="/skills"
             className="menu-item"
             activeClassName="selected"
@@ -46,12 +54,12 @@ export default ({ showMenu, showHideMenu, isMobile }) => {
           </NavLink>
 
           <NavLink
-            to="/classrooms"
+            to="/levels"
             className="menu-item"
             activeClassName="selected"
             onClick={onMenuItemClicked}
           >
-            <span className="menu-icon icon-accessibility" /> Classes
+            <span className="menu-icon icon-accessibility" /> Niveaux
           </NavLink>
         </div>
 
