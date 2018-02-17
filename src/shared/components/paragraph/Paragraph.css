@@ -1,9 +1,13 @@
 .paragraph {
-    margin: 0;
+    margin-bottom: 0;
     line-height: 1.55;
     letter-spacing: -.003em;
     --x-height-multiplier: 0.375;
     --baseline-multiplier: 0.17;
     word-wrap: break-word;
     text-rendering: optimizeLegibility;
+}
+
+.paragraph:first-child {
+    margin: 0;
 }
